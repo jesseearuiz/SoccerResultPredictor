@@ -1,5 +1,10 @@
 import express from "express";
 import type { Request, Response } from "express";
+import competitionsRouter from "./routes/competitions";
+import dotenv from "dotenv";
+import { MongoDBCollectionNamespace } from "mongodb";
+
+dotenv.config();
 
 const app = express();
 const PORT = Number(process.env.PORT ?? 5000);
@@ -22,3 +27,5 @@ app.get("/predictions/:id", (req: Request, res: Response) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
+
+app.use("/competitions", competitionsRouter);
