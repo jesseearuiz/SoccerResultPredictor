@@ -1,4 +1,4 @@
-// src/services/footballData.ts
+// src/services/footballData.tsI a
 
 const API_BASE = "https://api.football-data.org/v4";
 
@@ -7,7 +7,7 @@ export async function fetchCompetitionMatchesRaw(code: string) {
     throw new Error("FOOTBALL_DATA_API_KEY missing");
   }
 
-  const response = await fetch(`${API_BASE}/competitions/${code}/matches`, {
+  const response = await fetch(`${API_BASE}/competitions/`, {
     headers: {
       "X-Auth-Token": process.env.FOOTBALL_DATA_API_KEY,
       Accept: "application/json",
