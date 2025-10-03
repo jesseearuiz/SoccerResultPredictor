@@ -6,14 +6,8 @@ const router = Router();
 
 router.get("/", getCompetitions);
 
-// router.get("/:league/matches", async (req, res) => {
-//   try {
-//     const data = await fetchCompetitionMatchesRaw(req.params.league);
-//     res.json(data); // dump raw Football Data response
-//   } catch (error) {
-//     console.error(error);
-//     res.status(502).json({ error: "Unable to fetch competition matches" });
-//   }
-// });
+//move in api endpoints for teams and history so it can be imported
+//into mongo and fed into a ML service
+///
 
 export default router;
